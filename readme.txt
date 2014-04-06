@@ -4,7 +4,7 @@ Donate link: http://apasionados.es/
 Tags: url, slug, stop words, seo stop words, bing, google, search engine optimization, seo, seo pack, wordpress seo, yahoo, automatic seo, automation, marketing strategy, seo content, seo correction, seo meta, seo optimization, seo plugin, seo title, title
 Requires at least: 3.0.1
 Tested up to: 3.8.1
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,7 +32,7 @@ This first release is avaliable in English and Spanish. In the languages folder 
 If you would like the plugin in your language and you're good at translating, please drop us a line at [Contact us](http://apasionados.es/contacto/index.php?desde=wordpress-org-autocleanseo-home).
 
 = Further Reading =
-You can access the description of the plugin in Spanish at: [Auto Clean URL SEO en castellano](http://apasionados.es/blog/).
+You can access the description of the plugin in Spanish at: [Auto Clean URL SEO en castellano](http://apasionados.es/blog/optimizar-urls-wordpress-seo-plugin-wordpress-1925/).
 
 
 == Installation ==
@@ -50,9 +50,6 @@ Please note that the plugin should not be used together with QTRANSLATE or WPML.
 The main functionality is for Spanish, German and English websites, where it removes STOP WORDS from the WordPress Slugs (URLs). This means that all words which are not necesary for the search engines are removed, helping your SEO.
 
 For all languages it removes HTML entities and anything that is not a letter, digit, space or apostrophe.
-
-= Why should I make use of the Dofollow Case by Case SEO Plugin? = 
-If you work with WordPress you normally have no chance to decide yourself if a link should be a real link or not. All your comment links and comment author links are deactivated for search engines by default. But for good reasons you might want to punish only those links that really seem to be spam. To make it easier for you the plugin comes with nofollow links by default but you can follow the links that are valuable.
 
 = Does AUTO CLEAN URL SEO make changes to the database? =
 No.
@@ -79,6 +76,9 @@ Of course we do. ;-)
 
 == Changelog ==
 
+= 1.1 =
+* Updated and corrected readme.txt.
+
 = 1.0 =
 * First stable release.
 
@@ -87,8 +87,8 @@ Of course we do. ;-)
 
 == Upgrade Notice ==
 
-= 1.0 =
-First stable release.
+= 1.1 =
+Updated and corrected readme.txt.
 
 == Contact ==
 

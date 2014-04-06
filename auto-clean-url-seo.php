@@ -3,7 +3,7 @@
  * Plugin Name: Auto Clean URL for SEO
  * Plugin URI: http://apasionados.es
  * Description: This plugin removes STOP WORDS from the WordPress Slugs in ENGLISH, SPANISH and GERMAN. For all languages it removes HTML entities and anything that is not a letter, digit, space or apostrophe.
- * Version: 1.0
+ * Version: 1.1
  * Author: Apasionados.es
  * Author URI: http://apasionados.es
  * License: GPL2
@@ -64,5 +64,4 @@ function seo_slugs_stop_words_de () {
 	   return array (
 "a", "aber", "als", "am", "an", "auch", "auf", "aus", "b", "bei", "bin", "bis", "bist", "c", "d", "da", "dadurch", "daher", "darum", "das", "daß", "dass", "dein", "deine", "dem", "den", "der", "des", "deshalb", "dessen", "die", "dies", "dieser", "dieses", "doch", "dort", "du", "durch", "e", "ein", "eine", "einem", "einen", "einer", "eines", "er", "es", "euer", "eure", "f", "für", "g", "h", "hatte", "hatten", "hattest", "hattet", "hier hinter", "i", "ich", "ihr", "ihre", "im", "in", "ist", "j", "ja", "jede", "jedem", "jeden", "jeder", "jedes", "jener", "jenes", "jetzt", "k", "kann", "kannst", "können", "könnt", "l", "m", "machen", "mein", "meine", "mit", "muß", "müssen", "mußt", "musst", "müßt", "n", "nach", "nachdem", "nein", "nicht", "nun", "o", "oder", "p", "q", "r", "s", "seid", "sein", "seine", "sich", "sie", "sind", "soll", "sollen", "sollst", "sollt", "sonst", "soweit", "sowie", "t", "u", "über", "und", "unser unsere", "unter", "v", "vom", "von", "vor", "w", "wann", "warum", "was", "weiter", "weitere", "wenn", "wer", "werde", "werden", "werdet", "weshalb", "wie", "wieder", "wieso", "wir", "wird", "wirst", "wo", "woher", "wohin", "x", "y", "z", "zu", "zum", "zur");
 } // Stop word list from: http://www.ranks.nl/stopwords/german
-
 ?>
