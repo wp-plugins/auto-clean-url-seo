@@ -3,7 +3,7 @@ Contributors: apasionados, netconsulting
 Donate link: http://apasionados.es/
 Tags: url, slug, stop words, seo stop words, bing, google, search engine optimization, seo, seo pack, wordpress seo, yahoo, automatic seo, automation, marketing strategy, seo content, seo correction, seo meta, seo optimization, seo plugin, seo title, title
 Requires at least: 3.0.1
-Tested up to: 3.9.0
+Tested up to: 3.9.1
 Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -17,6 +17,8 @@ This plugin removes STOP WORDS from the WordPress Slugs in ENGLISH, SPANISH and 
 For all languages it removes HTML entities and anything that is not a letter, digit, space or apostrophe.
 
 Please note that the plugin should not be used together with QTRANSLATE or WPML. In case you have a multi-language blog, this plugin doesn't work correctly.
+
+Yoast WordPress SEO has added the functionality of this plugin in version 1.4.16 ("Add option to enable slug stop word cleaning") which is on by default. If you use our plugin together with Yoast Wordpress SEO, please turn the WordPress SEO functionality off (find it under SEO -> Permalinks).
 
 = What can I do with this plugin? =
 
@@ -62,6 +64,7 @@ You can simply activate, deactivate or delete it in your plugin management secti
 
 = Are there any known incompatibilities? =
 The plugin should not be used together with QTRANSLATE or WPML. In case you have a multi-language blog, this plugin doesn't work correctly.
+Yoast WordPress SEO has added the functionality of this plugin in version 1.4.16 ("Add option to enable slug stop word cleaning") which is on by default. If you use our plugin together with Yoast Wordpress SEO, please turn the WordPress SEO functionality off (find it under SEO -> Permalinks).
 
 = Are you planning to continue development ? =
 Maybe. We are planning to include one configurable parameter to remove/hide the slug option, so that non administrators can't change the slug. But we are not sure if this is a feature we or our customers need. 
