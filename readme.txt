@@ -3,7 +3,7 @@ Contributors: apasionados, netconsulting
 Donate link: http://apasionados.es/
 Tags: url, slug, stop words, seo stop words, bing, google, search engine optimization, seo, seo pack, wordpress seo, yahoo, automatic seo, automation, marketing strategy, seo content, seo correction, seo meta, seo optimization, seo plugin, seo title, title
 Requires at least: 3.0.1
-Tested up to: 3.9.1
+Tested up to: 4.1
 Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
