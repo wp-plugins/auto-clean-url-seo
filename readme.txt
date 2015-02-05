@@ -33,7 +33,7 @@ This first release is avaliable in English and Spanish. In the languages folder 
 
 If you would like the plugin in your language and you're good at translating, please drop us a line at [Contact us](http://apasionados.es/contacto/index.php?desde=wordpress-org-autocleanseo-home).
 
-* Translation to Serbo-Croatian language sr_RS by [Borisa Djuraskovic](www.webhostinghub.com).
+* Translation to Serbo-Croatian language sr_RS by [Borisa Djuraskovic](http://www.webhostinghub.com).
 
 
 = Further Reading =
