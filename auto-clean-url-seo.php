@@ -3,7 +3,7 @@
  * Plugin Name: Auto Clean URL for SEO
  * Plugin URI: http://apasionados.es
  * Description: This plugin removes STOP WORDS from the WordPress Slugs in ENGLISH, SPANISH and GERMAN. For all languages it removes HTML entities and anything that is not a letter, digit, space or apostrophe.
- * Version: 1.3
+ * Version: 1.3.1
  * Author: Apasionados.es
  * Author URI: http://apasionados.es
  * License: GPL2
