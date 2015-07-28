@@ -16,7 +16,7 @@ This plugin removes STOP WORDS from the WordPress Slugs in ENGLISH, SPANISH, GER
 
 For all languages it removes HTML entities and anything that is not a letter, digit, space or apostrophe.
 
-Please note that the plugin should not be used together with QTRANSLATE or WPML. In case you have a multi-language blog, this plugin doesn't work correctly.
+Please note that the plugin should not be used together with QTRANSLATE, WPML or POLYLANG. In case you have a multi-language blog, this plugin doesn't work correctly.
 
 **Yoast WordPress SEO has added a similar functionality to the one of this plugin in version 1.4.16** ("Add option to enable slug stop word cleaning") which is on by default. If you use our plugin together with Yoast Wordpress SEO, please turn the WordPress SEO functionality off (find it under SEO -> Permalinks).
 
@@ -135,10 +135,10 @@ That is, the plugin name name must be the language code followed by an underscor
 
 For example:
 
-* en_US – US English
-* en_UK – UK English
-* es_ES – Spanish from Spain
-* fr_FR – French from France
-* zh_CN – Simplified Chinese
+* en_US for US English
+* en_UK for UK English
+* es_ES for Spanish from Spain
+* fr_FR for French from France
+* zh_CN for Simplified Chinese
 
 A list of language codes can be found [here](http://en.wikipedia.org/wiki/ISO_639), and country codes can be found [here](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). A full list of encoding names can also be found at [IANA](http://www.iana.org/assignments/character-sets).
