@@ -16,14 +16,13 @@ This plugin removes STOP WORDS from the WordPress Slugs in ENGLISH, SPANISH, GER
 
 For all languages it removes HTML entities and anything that is not a letter, digit, space or apostrophe.
 
-This plugin uses the WordPress filter "name_save_pre" which means that the Slug is modified when saved the first time as draft or when published (if it hasn't been saved as draft before). This means that when the slug is first created from the Title of the post the Stop words and HTML entities are not removed at this moment.
-
 Please note that the plugin should not be used together with QTRANSLATE or WPML. In case you have a multi-language blog, this plugin doesn't work correctly.
 
-Yoast WordPress SEO has added a similar functionality to the one of this plugin in version 1.4.16 ("Add option to enable slug stop word cleaning") which is on by default. If you use our plugin together with Yoast Wordpress SEO, please turn the WordPress SEO functionality off (find it under SEO -> Permalinks).
+**Yoast WordPress SEO has added a similar functionality to the one of this plugin in version 1.4.16** ("Add option to enable slug stop word cleaning") which is on by default. If you use our plugin together with Yoast Wordpress SEO, please turn the WordPress SEO functionality off (find it under SEO -> Permalinks).
 
->Yoast WordPress SEO acts on the WordPress filter "name_save_pre" which means that the Slug is modified when saved as draft the first time or when published (only if it hasn't been saved as draft before). This means that when the slug is first created from the Title of the post the Stop words and HTML entities are not removed at this moment.
->Our plugin acts on the WordPress filter "name_save_pre" and on the AJAX action "wp_ajax_sample-permalink" which fires when the Slug is created for the first time. This means that with our plugin the slug is created without stop words in real time. After that you can edit the slug and it will not be modified again by the plugin after it has been edited.
+>**Yoast WordPress SEO** acts on the WordPress filter "name_save_pre" which means that the Slug is modified when saved as draft the first time or when published (only if it hasn't been saved as draft before). This means that when the slug is first created from the Title of the post the Stop words and HTML entities are not removed at this moment.
+
+>**Our plugin** acts on the WordPress filter "name_save_pre" and on the AJAX action "wp_ajax_sample-permalink" which fires when the Slug is created for the first time. **This means that with our plugin the slug is created without stop words in real time**. After that you can edit the slug and it will not be modified again by the plugin after it has been edited.
 
 = What can I do with this plugin? =
 
