@@ -3,7 +3,7 @@
  * Plugin Name: Auto Clean URL for SEO
  * Plugin URI: http://apasionados.es
  * Description: This plugin removes STOP WORDS from the WordPress Slugs in ENGLISH, SPANISH and GERMAN. For all languages it removes HTML entities and anything that is not a letter, digit, space or apostrophe.
- * Version: 1.3.1
+ * Version: 1.4
  * Author: Apasionados.es
  * Author URI: http://apasionados.es
  * License: GPL2
@@ -32,13 +32,14 @@ add_action( 'admin_init', 'autocleanurlforseo_load_language' );
 function autocleanurlforseo_load_language() {
 	load_plugin_textdomain( 'autocleanurlforseo', false,  dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 }
-
-add_filter('name_save_pre', 'seo_slugs', 0);
-function seo_slugs($slug) {
-	if ($slug) return $slug; // We don't want to change an existing slug
-	global $wpdb;
-	$seo_slug = strtolower(stripslashes($_POST['post_title']));
+add_action( 'wp_ajax_sample-permalink', 'ajax_seo_slugs',0);
+function ajax_seo_slugs($data) {
+    $post_id = isset($_POST['post_id']) ? intval($_POST['post_id']) : 0;
+    $post_name = isset($_POST['new_slug'])? $_POST['new_slug'] : null;
+	$new_title = isset($_POST['new_title'])? $_POST['new_title'] : null;
+	$seo_slug = strtolower(stripslashes($new_title));
 	$seo_slug = preg_replace('/&.+?;/', '', $seo_slug); // Kill HTML entities
+	$seo_slug_with_stopwords = $seo_slug;
 	$seo_language = strtolower( substr( get_bloginfo ( 'language' ), 0, 2 ) ); 	// Check the language; we only want the first two letters
 	if ( $seo_language == 'en' ) { // Check if blog language is English (en)
 		$seo_slug_array = array_diff (split(" ", $seo_slug), seo_slugs_stop_words_en()); // Turn it to an array and strip common/stop word by comparing against ENGLISH array
@@ -54,6 +55,41 @@ function seo_slugs($slug) {
 		$seo_slug = join("-", $seo_slug_array);	// Turn the sanitized array into a string
 	}
 	$seo_slug = preg_replace ("/[^a-zA-Z0-9 \']-/", "", $seo_slug); // Kill anything that is not a letter, digit, space or apostrophe
+	// Turn it to an array to count left words. If less than 3 words left, use original slug.
+	// $clean_slug_array = explode( '-', $seo_slug );
+	// if ( count( $clean_slug_array ) < 3 ) {
+	//		$seo_slug = $seo_slug_with_stopwords;
+	// }
+	if (empty($post_name)) { $_POST['new_slug'] = $seo_slug; } // We don't want to change an existing slug
+}
+
+add_filter('name_save_pre', 'seo_slugs', 0);
+function seo_slugs($slug) {
+	if ($slug) return $slug; // We don't want to change an existing slug
+	global $wpdb;
+	$seo_slug = strtolower(stripslashes($_POST['post_title']));
+	$seo_slug = preg_replace('/&.+?;/', '', $seo_slug); // Kill HTML entities
+	$seo_slug_with_stopwords = $seo_slug;
+	$seo_language = strtolower( substr( get_bloginfo ( 'language' ), 0, 2 ) ); 	// Check the language; we only want the first two letters
+	if ( $seo_language == 'en' ) { // Check if blog language is English (en)
+		$seo_slug_array = array_diff (split(" ", $seo_slug), seo_slugs_stop_words_en()); // Turn it to an array and strip common/stop word by comparing against ENGLISH array
+		$seo_slug = join("-", $seo_slug_array);	// Turn the sanitized array into a string
+	} elseif ( $seo_language == 'es' ) { // Check if blog language is Spanish (es)
+		$seo_slug_array = array_diff (split(" ", $seo_slug), seo_slugs_stop_words_es()); // Turn it to an array and strip common/stop word by comparing against SPANISH array
+		$seo_slug = join("-", $seo_slug_array);	// Turn the sanitized array into a string
+	} elseif ( $seo_language == 'de' ) { // Check if blog language is German (de)
+		$seo_slug_array = array_diff (split(" ", $seo_slug), seo_slugs_stop_words_de()); // Turn it to an array and strip common/stop word by comparing against GERMAN array
+		$seo_slug = join("-", $seo_slug_array);	// Turn the sanitized array into a string
+	} elseif ( $seo_language == 'fr' ) { // Check if blog language is German (de)
+		$seo_slug_array = array_diff (split(" ", $seo_slug), seo_slugs_stop_words_fr()); // Turn it to an array and strip common/stop word by comparing against GERMAN array
+		$seo_slug = join("-", $seo_slug_array);	// Turn the sanitized array into a string
+	}
+	$seo_slug = preg_replace ("/[^a-zA-Z0-9 \']-/", "", $seo_slug); // Kill anything that is not a letter, digit, space or apostrophe
+	// Turn it to an array to count left words. If less than 3 words left, use original slug.
+	// $clean_slug_array = explode( '-', $seo_slug );
+	// if ( count( $clean_slug_array ) < 3 ) {
+	//		$seo_slug = $seo_slug_with_stopwords;
+	// }
 	return $seo_slug;
 }
 
