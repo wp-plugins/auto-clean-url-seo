@@ -3,18 +3,20 @@ Contributors: apasionados, netconsulting
 Donate link: http://apasionados.es/
 Tags: url, slug, stop words, seo stop words, bing, google, search engine optimization, seo, seo pack, wordpress seo, yahoo, automatic seo, automation, marketing strategy, seo content, seo correction, seo meta, seo optimization, seo plugin, seo title, title
 Requires at least: 3.0.1
-Tested up to: 4.1
+Tested up to: 4.2.3
 Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Auto Clean URL for SEO removes STOP WORDS from the WordPress Slugs (URLs) in ENGLISH, SPANISH and GERMAN.
+Auto Clean URL for SEO removes STOP WORDS from the WordPress Slugs (URLs) in ENGLISH, SPANISH, GERMAN and FRENCH.
 
 == Description ==
 
 This plugin removes STOP WORDS from the WordPress Slugs in ENGLISH, SPANISH and GERMAN.
 
 For all languages it removes HTML entities and anything that is not a letter, digit, space or apostrophe.
+
+This plugin uses the WordPress filter "name_save_pre" which means that the Slug is modified when saved the first time as draft or when published (if it hasn't been saved as draft before). This means that when the slug is first created from the Title of the post the Stop words and HTML entities are not removed at this moment.
 
 Please note that the plugin should not be used together with QTRANSLATE or WPML. In case you have a multi-language blog, this plugin doesn't work correctly.
 
